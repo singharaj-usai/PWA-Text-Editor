@@ -13,7 +13,7 @@ const initdb = async () =>
       console.log('jate database created');
     },
   });
-
+//putDb: adds data
 // TODO: Add logic to a method that accepts some content and adds it to the database
 export const putDb = async (content) => {
 const jadeDb = await openDB ('jate', 1);
@@ -22,6 +22,7 @@ const store = tx.objectStore('jate');
 const request = store.put({ id: 1, value: content });
 const result = await request;
 }
+// getDb: gets data
 // TODO: Add logic for a method that gets all the content from the database
 export const getDb = async () => console.error('getDb not implemented');
 
